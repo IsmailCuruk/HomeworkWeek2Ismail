@@ -1,7 +1,12 @@
 
 module.exports = class ShoppingCart {
-    constructor(){
+    constructor() {
+        this.items = []
+    };
+    getItems() {
+        return this.items
+    };
 
-    }
+
 
 }
