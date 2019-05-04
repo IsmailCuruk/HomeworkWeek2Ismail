@@ -10,12 +10,17 @@ module.exports = class ShoppingCart {
         const item = {
             name: itemName,
             quantity: quantity,
-            pricePerUnit: price
+            pricePerUnit: price,
         };
         return this.items.push(item);
     };
     clear() {
         return this.items = [];
     }
-    
+    total() {
+        return this.items.reduce(((currentTotal, currentItem) => {
+            return (currentItem.pricePerUnit*currentItem.quantity) + currentTotal
+        }),0);
+        
+    }
 }
