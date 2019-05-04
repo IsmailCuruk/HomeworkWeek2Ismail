@@ -14,5 +14,8 @@ module.exports = class ShoppingCart {
         };
         return this.items.push(item);
     };
-
+    clear() {
+        return this.items = [];
+    }
+    
 }
